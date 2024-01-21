@@ -6,7 +6,7 @@ base_link = 'https://hplussport.net/#people'
 
 page_read = requests.get(base_link)
 
-soup = BeautifulSoup(page_read.content)
+soup = BeautifulSoup(page_read.content, features="lxml")
 
 board_names = soup.select(".card-name")
 len(board_names)
@@ -24,3 +24,4 @@ for i in range(len(board_roles)):
   results.append(result_df)
   
 results = pd.concat(results)
+results
