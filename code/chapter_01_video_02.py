@@ -24,4 +24,4 @@ for i in range(len(board_roles)):
   results.append(result_df)
   
 results = pd.concat(results)
-results
+print(results)
